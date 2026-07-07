@@ -1,46 +1,345 @@
  <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OneClick AI</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OneClick AI</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-  <header class="navbar">
-    <div class="logo">⚡ OneClick AI</div>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Tools</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </nav>
-  </header>
+<header>
 
-  <section class="hero">
-    <h1>50+ AI Tools. One Click.</h1>
-    <p>All your AI tools for writing, coding, and productivity in one place.</p>
-    <button>Explore Tools</button>
-  </section>
+<div class="logo">
+⚡ OneClick AI
+</div>
 
-  <section class="tools">
-    <h2>Popular Tools</h2>
+<nav>
 
-    <div class="grid">
-      <div class="card">📝 AI Rewriter</div>
-      <div class="card">📄 Summarizer</div>
-      <div class="card">🖼️ Background Remover</div>
-      <div class="card">📱 QR Generator</div>
-      <div class="card">💻 Code Generator</div>
-    </div>
-  </section>
+<a href="#">Home</a>
+<a href="#tools">Tools</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
 
-  <footer>
-    <p>© 2026 OneClick AI</p>
-  </footer>
+</nav>
 
-  <script src="script.js"></script>
+</header>
+
+<section class="hero">
+
+<h1>50+ Free AI Tools</h1>
+
+<p>
+Rewrite text, summarize articles, generate QR codes,
+write code, remove backgrounds and much more.
+</p>
+
+<button onclick="scrollToTools()">
+Explore Tools
+</button>
+
+</section>
+
+<section id="tools">
+
+<h2>Popular AI Tools</h2>
+
+<div class="tools-grid">
+
+<div class="tool-card" onclick="openTool('rewriter')">
+
+<h3>📝 AI Rewriter</h3>
+
+<p>
+Rewrite paragraphs instantly.
+</p>
+
+</div>
+
+<div class="tool-card" onclick="openTool('summary')">
+
+<h3>📄 AI Summarizer</h3>
+
+<p>
+Summarize long text in seconds.
+</p>
+
+</div>
+
+<div class="tool-card" onclick="openTool('qr')">
+
+<h3>📱 QR Generator</h3>
+
+<p>
+Generate QR codes instantly.
+</p>
+
+</div>
+
+<div class="tool-card" onclick="openTool('code')">
+
+<h3>💻 Code Generator</h3>
+
+<p>
+Generate HTML, CSS & JavaScript.
+</p>
+
+</div>
+
+<div class="tool-card" onclick="openTool('background')">
+
+<h3>🖼️ Background Remover</h3>
+
+<p>
+Coming Soon
+</p>
+
+</div>
+
+<div class="tool-card">
+
+<h3>➕ More Tools</h3>
+
+<p>
+Many more AI tools are coming.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="workspace">
+
+<h2 id="toolTitle">
+
+Choose a Tool
+
+</h2>
+
+<textarea
+id="inputText"
+placeholder="Paste your text here..."></textarea>
+
+<br>
+
+<button id="runBtn">
+
+Run Tool
+
+</button>
+
+<br>
+
+<textarea
+id="outputText"
+placeholder="Output will appear here..."
+readonly></textarea>
+
+</section>
+
+<section id="about">
+
+<h2>About OneClick AI</h2>
+
+<p>
+
+OneClick AI is a free platform that combines multiple AI-powered tools into one simple website.
+Our goal is to save time by giving everyone fast, easy-to-use tools in one place.
+
+</p>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 OneClick AI
+
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OneClick AI</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+⚡ OneClick AI
+</div>
+
+<nav>
+
+<a href="#">Home</a>
+<a href="#tools">Tools</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>50+ Free AI Tools</h1>
+
+<p>
+Rewrite text, summarize articles, generate QR codes,
+write code, remove backgrounds and much more.
+</p>
+
+<button onclick="scrollToTools()">
+Explore Tools
+</button>
+
+</section>
+
+<section id="tools">
+
+<h2>Popular AI Tools</h2>
+
+<div class="tools-grid">
+
+<div class="tool-card" onclick="openTool('rewriter')">
+
+<h3>📝 AI Rewriter</h3>
+
+<p>
+Rewrite paragraphs instantly.
+</p>
+
+</div>
+
+<div class="tool-card" onclick="openTool('summary')">
+
+<h3>📄 AI Summarizer</h3>
+
+<p>
+Summarize long text in seconds.
+</p>
+
+</div>
+
+<div class="tool-card" onclick="openTool('qr')">
+
+<h3>📱 QR Generator</h3>
+
+<p>
+Generate QR codes instantly.
+</p>
+
+</div>
+
+<div class="tool-card" onclick="openTool('code')">
+
+<h3>💻 Code Generator</h3>
+
+<p>
+Generate HTML, CSS & JavaScript.
+</p>
+
+</div>
+
+<div class="tool-card" onclick="openTool('background')">
+
+<h3>🖼️ Background Remover</h3>
+
+<p>
+Coming Soon
+</p>
+
+</div>
+
+<div class="tool-card">
+
+<h3>➕ More Tools</h3>
+
+<p>
+Many more AI tools are coming.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="workspace">
+
+<h2 id="toolTitle">
+
+Choose a Tool
+
+</h2>
+
+<textarea
+id="inputText"
+placeholder="Paste your text here..."></textarea>
+
+<br>
+
+<button id="runBtn">
+
+Run Tool
+
+</button>
+
+<br>
+
+<textarea
+id="outputText"
+placeholder="Output will appear here..."
+readonly></textarea>
+
+</section>
+
+<section id="about">
+
+<h2>About OneClick AI</h2>
+
+<p>
+
+OneClick AI is a free platform that combines multiple AI-powered tools into one simple website.
+Our goal is to save time by giving everyone fast, easy-to-use tools in one place.
+
+</p>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 OneClick AI
+
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
